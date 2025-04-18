@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare loan offers from top lenders with personalized rates and terms">
+  <title>LoanCompare Pro | Smart Loan Aggregator Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="#"><span class="logo-icon"><i class="fas fa-hand-holding-usd"></i></span>LoanCompare<span class="highlight">Pro</span></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+          <li><a href="#how-it-works"><i class="fas fa-question-circle"></i> How It Works</a></li>
+          <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button class="btn btn-outline">Login</button>
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Find Your Perfect Loan in Minutes</h1>
+        <p class="subtitle">Compare personalized loan offers from 50+ trusted lenders without affecting your credit score</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">$1B+</div>
+            <div class="stat-label">Loans Processed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Lending Partners</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="loan-calculator">
+    <div class="container">
+      <div class="calculator-container">
+        <div class="calculator-header">
+          <h2>Smart Loan Finder</h2>
+          <p>Fill in your details to see personalized loan offers</p>
+        </div>
+        <form id="loanForm" class="calculator-form">
+          <div class="form-group">
+            <label for="loanPurpose">Loan Purpose</label>
+            <select id="loanPurpose" name="loanPurpose" required>
+              <option value="" disabled selected>Select purpose</option>
+              <option value="debt-consolidation">Debt Consolidation</option>
+              <option value="home-improvement">Home Improvement</option>
+              <option value="business">Business Loan</option>
+              <option value="auto">Auto Loan</option>
+              <option value="medical">Medical Expenses</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="loanAmount">Loan Amount</label>
+              <div class="input-with-icon">
+                <span class="input-icon">$</span>
+                <input type="number" id="loanAmount" name="loanAmount" min="1000" max="100000" placeholder="10,000" required>
+              </div>
+              <div class="range-slider">
+                <input type="range" id="loanAmountRange" min="1000" max="100000" step="500" value="10000">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="creditScore">Credit Score</label>
+              <select id="creditScore" name="creditScore" required>
+                <option value="" disabled selected>Select your score</option>
+                <option value="excellent">Excellent (720+)</option>
+                <option value="good">Good (680-719)</option>
+                <option value="fair">Fair (640-679)</option>
+                <option value="poor">Poor (639 or below)</option>
+                <option value="unknown">I don't know</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="loanTerm">Loan Term (months)</label>
+              <div class="input-with-icon">
+                <input type="number" id="loanTerm" name="loanTerm" min="6" max="84" placeholder="36" required>
+                <span class="input-icon">months</span>
+              </div>
+              <div class="range-slider">
+                <input type="range" id="loanTermRange" min="6" max="84" step="1" value="36">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="employmentStatus">Employment Status</label>
+              <select id="employmentStatus" name="employmentStatus" required>
+                <option value="" disabled selected>Select status</option>
+                <option value="employed">Employed</option>
+                <option value="self-employed">Self-Employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="retired">Retired</option>
+                <option value="student">Student</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-search"></i> Compare Loans
+            </button>
+            <div class="secure-check">
+              <i class="fas fa-lock"></i> 256-bit SSL Encryption
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose LoanCompare Pro</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Best Rates Guaranteed</h3>
+          <p>We scan hundreds of lenders to find you the lowest possible rates based on your credit profile.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Soft Credit Check</h3>
+          <p>Checking your rates won't affect your credit score. We use a soft pull that lenders can't see.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Fast Approval</h3>
+          <p>Get pre-approved in minutes and receive funds as soon as the next business day.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3>No Hidden Fees</h3>
+          <p>We're transparent about all costs. No origination fees, prepayment penalties, or surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="loan-results" id="loanResults" style="display: none;">
+    <div class="container">
+      <div class="results-header">
+        <h2>Personalized Loan Offers</h2>
+        <div class="results-summary">
+          <span id="resultsCount">0</span> offers found for your criteria
+        </div>
+        <div class="sort-options">
+          <label>Sort by:</label>
+          <select id="sortBy">
+            <option value="apr">Lowest APR</option>
+            <option value="monthly">Lowest Monthly Payment</option>
+            <option value="total">Lowest Total Cost</option>
+            <option value="rating">Lender Rating</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="results-filters">
+        <div class="filter-group">
+          <label>APR Range:</label>
+          <div class="range-inputs">
+            <input type="number" id="minAPR" placeholder="Min" min="0" max="50">
+            <span>to</span>
+            <input type="number" id="maxAPR" placeholder="Max" min="0" max="50">
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Lender Type:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="lenderType" value="bank" checked> Banks</label>
+            <label><input type="checkbox" name="lenderType" value="credit-union" checked> Credit Unions</label>
+            <label><input type="checkbox" name="lenderType" value="online" checked> Online Lenders</label>
+          </div>
+        </div>
+        <button id="applyFilters" class="btn btn-outline">Apply Filters</button>
+      </div>
+      
+      <div id="loanOffers" class="loan-offers-grid"></div>
+      
+      <div class="results-footer">
+        <div class="disclaimer">
+          <p><i class="fas fa-info-circle"></i> The loan offers displayed are estimates based on the information you provided. Actual terms may vary after formal application. APR ranges from 3.49% to 35.99%. Not all applicants will qualify.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Complete Your Profile</h3>
+            <p>Fill out our simple form with your loan needs and financial information. It takes just 2 minutes.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Compare Personalized Offers</h3>
+            <p>We'll show you real loan options from our network of trusted lenders with no impact to your credit score.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Choose Your Loan</h3>
+            <p>Select the offer that works best for you and complete the application directly with the lender.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Receive Your Funds</h3>
+            <p>Many lenders can deposit funds as soon as the next business day after approval.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I saved over 2% on my APR compared to what my bank offered. The process was incredibly easy and I had the money in my account within 48 hours."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="images/avatar1.jpg" alt="Sarah J.">
+            </div>
+            <div class="author-info">
+              <h4>Sarah J.</h4>
+              <p>Home Improvement Loan</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"As a small business owner, I needed quick funding. LoanCompare Pro connected me with three lenders who understood my needs and I got approved the same day."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="images/avatar2.jpg" alt="Michael T.">
+            </div>
+            <div class="author-info">
+              <h4>Michael T.</h4>
+              <p>Business Loan</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"Even with fair credit, I was able to find multiple options to consolidate my debt. The comparison tool made it easy to see which loan would save me the most money."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <img src="images/avatar3.jpg" alt="Lisa M.">
+            </div>
+            <div class="author-info">
+              <h4>Lisa M.</h4>
+              <p>Debt Consolidation Loan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Have Questions?</h2>
+          <p>Our loan specialists are available to help you find the best financing solution for your needs.</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fas fa-phone"></i>
+              <h4>Call Us</h4>
+              <p>1-800-LOANPRO</p>
+              <p>Mon-Fri: 8am-8pm EST</p>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <h4>Email Us</h4>
+              <p>support@loancomparepro.com</p>
+              <p>Response within 24 hours</p>
+            </div>
+            <div class="contact-method">
+              <i class="fas fa-comment-dots"></i>
+              <h4>Live Chat</h4>
+              <p>Available during business hours</p>
+              <p>Look for the chat icon</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="contactName" name="contactName" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="contactEmail" name="contactEmail" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="contactPhone" name="contactPhone" placeholder="Phone Number (optional)">
+            </div>
+            <div class="form-group">
+              <select id="contactSubject" name="contactSubject" required>
+                <option value="" disabled selected>What can we help you with?</option>
+                <option value="loan-options">Loan Options</option>
+                <option value="application">Application Process</option>
+                <option value="existing-loan">Existing Loan</option>
+                <option value="other">Other Question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="contactMessage" name="contactMessage" placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="logo">
+            <a href="#"><span class="logo-icon"><i class="fas fa-hand-holding-usd"></i></span>LoanCompare<span class="highlight">Pro</span></a>
+          </div>
+          <p class="footer-about">LoanCompare Pro is a leading loan comparison platform that helps consumers find the best financing options from our network of trusted lenders.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Loan Types</h4>
+          <ul class="footer-links">
+            <li><a href="#">Personal Loans</a></li>
+            <li><a href="#">Debt Consolidation</a></li>
+            <li><a href="#">Home Improvement</a></li>
+            <li><a href="#">Business Loans</a></li>
+            <li><a href="#">Auto Loans</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Licenses</a></li>
+            <li><a href="#">Disclosures</a></li>
+            <li><a href="#">ADA Compliance</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 LoanCompare Pro. All rights reserved.</p>
+        <p>LoanCompare Pro is not a lender but connects consumers with lenders. We do not charge fees for our service. Not all applicants will qualify.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="chat-bubble">
+    <i class="fas fa-comment-dots"></i>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
